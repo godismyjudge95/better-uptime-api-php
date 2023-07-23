@@ -1,0 +1,61 @@
+{
+    "name": "godismyjudge95/better-uptime",
+    "description": "A simple API client for BetterUptime built on Saloon v2.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "godismyjudge95",
+        "saloon",
+        "api",
+        "api-integrations",
+        "better-uptime"
+    ],
+    "authors": [
+        {
+            "name": "Daniel Weaver",
+            "email": "godismyjudge95@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/godismyjudge95/better-uptime",
+    "require": {
+        "php": "^8.2",
+        "illuminate/collections": "^10.12",
+        "sammyjo20/saloon": "^2.0"
+    },
+    "require-dev": {
+        "ext-simplexml": "*",
+        "league/flysystem": "^3.0",
+        "pestphp/pest": "^2.2.3",
+        "phpstan/phpstan": "^1.9",
+        "laravel/pint": "^1.10"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "BetterUptime\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BetterUptime\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "fix-code": [
+            "php8.2 ./vendor/bin/pint"
+        ],
+        "test": [
+            "php8.2 ./vendor/bin/pest"
+        ],
+        "pstan": [
+            "php8.2 ./vendor/bin/phpstan analyse"
+        ]
+    }
+}
